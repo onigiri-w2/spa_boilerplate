@@ -1,3 +1,14 @@
+# TODO
+
+- エラー形式作ろう。
+
+### 以下リンクの構成を真似しよう
+
+- https://zenn.dev/shimpeiws/articles/3ef4416b7fe2f6
+- https://tech.locaop.jp/entry/2023/02/17/121250
+- https://scrapbox.io/fsubal/React_%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E6%A7%8B%E6%88%90
+- https://scrapbox.io/tosuke/%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89(React)%E3%81%AE%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E6%A7%8B%E6%88%90
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
