@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { fetchAllTodo } from "api/todo/endpoints/todo";
+import { fetchAllTodo } from "@/features/todo/api/endpoints/todo";
 
 type TodoProviderType = {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ type TodoProviderType = {
 const TodoContext = createContext({});
 export const TodoProvider = ({ children }: TodoProviderType) => {
   const { data, isLoading, refetch } = useQuery(["fetchAllTodo"], () =>
-    fetchAllTodo("aaaaa")
+    fetchAllTodo({ authIdToken: "token" })
   );
   const [reload, setReload] = useState(false);
   function exeReload() {

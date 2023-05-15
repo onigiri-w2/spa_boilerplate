@@ -2,7 +2,7 @@ import React from "react";
 
 import { Flex, Text, VStack, Container } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { ROOT_PATH } from "routes/route_path";
+import { ROOT_PATH } from "@/routes/path";
 
 type Props = {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ type Props = {
 
 export const MainLayout = ({ children }: Props) => {
   return (
-    <Container p={0} maxW="100%">
+    <Container p={0} maxW="50%" m="0 auto">
       <Flex minHeight="100vh" direction="column">
         <Header />
         {children}

@@ -1,12 +1,25 @@
-import { useRoutes } from "react-router-dom";
+import { Navigate, useRoutes } from "react-router-dom";
 
-import { Dashboard } from "pages/Dashboard";
-import { ROOT_PATH } from "./route_path";
+import { useAuthContext } from "@/providers/auth";
+
+import { LoginPage } from "../pages/LoginPage";
+import { TodoPage } from "../pages/TodoPage";
+import { LOGIN_PATH, TODO_PATH } from "./path";
 
 export const AppRoutes = () => {
-  const commonRoutes = [{ path: ROOT_PATH, element: <Dashboard /> }];
+  const { isLogin } = useAuthContext();
 
-  const element = useRoutes([...commonRoutes]);
+  const privateRoute = [
+    { path: TODO_PATH, element: <TodoPage /> },
+    { path: "*", element: <Navigate to={TODO_PATH} /> },
+  ];
+  const publicRoute = [
+    { path: LOGIN_PATH, element: <LoginPage /> },
+    { path: "*", element: <Navigate to={LOGIN_PATH} /> },
+  ];
+  let routes = isLogin ? privateRoute : publicRoute;
+
+  const element = useRoutes([...routes]);
 
   return <>{element}</>;
 };
