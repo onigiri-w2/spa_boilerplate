@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Flex, Text, VStack, Container } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+
 import { ROOT_PATH } from "@/routes/path";
 
 type Props = {

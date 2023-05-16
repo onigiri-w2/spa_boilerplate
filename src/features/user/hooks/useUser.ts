@@ -1,5 +1,6 @@
-import { useProfileGet, useRegisterPost } from "../api/reactquery/user";
 import { getIdToken } from "@/features/auth/functions";
+
+import { useProfileGet, useRegisterPost } from "../api/reactquery/user";
 
 export const useUser = (uid?: string) => {
   // TODO: ここおかしいので修正、authIdTokenに適切な値を与えれるようにしないと。

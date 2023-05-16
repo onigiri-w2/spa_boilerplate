@@ -1,14 +1,15 @@
-import {
-  useGenericQuery,
-  Option as GQOption,
-} from "@/hooks/reactquery/useGenericQuery";
+import type { ApiError } from "@/api/backends/todo/types";
 import {
   useGenericMutation,
   Option as GMOption,
 } from "@/hooks/reactquery/useGenericMutation";
-import { User, UserProfileGetRequest, UserRegisterPostRequest } from "../types";
+import {
+  useGenericQuery,
+  Option as GQOption,
+} from "@/hooks/reactquery/useGenericQuery";
+
 import { profileGet, registerPost } from "../endpoints/user";
-import type { ApiError } from "@/api/backends/todo/types";
+import { User, UserProfileGetRequest, UserRegisterPostRequest } from "../types";
 
 export const useProfileGet = (
   request: UserProfileGetRequest,

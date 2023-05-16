@@ -4,6 +4,7 @@ import { useAuthContext } from "@/providers/auth";
 
 import { LoginPage } from "../pages/LoginPage";
 import { TodoPage } from "../pages/TodoPage";
+
 import { LOGIN_PATH, TODO_PATH } from "./path";
 
 export const AppRoutes = () => {

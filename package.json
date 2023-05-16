@@ -54,7 +54,46 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "plugins": [
+      "unused-imports",
+      "import"
+    ],
+    "rules": {
+      "import/order": [
+        "warn",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "index"
+          ],
+          "newlines-between": "always",
+          "pathGroupsExcludedImportTypes": [
+            "builtin"
+          ],
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          },
+          "pathGroups": [
+            {
+              "pattern": "{react,react-dom/**,react-router-dom,react-helmet-async}",
+              "group": "builtin",
+              "position": "before"
+            },
+            {
+              "pattern": "@/**",
+              "group": "parent",
+              "position": "before"
+            }
+          ]
+        }
+      ],
+      "unused-imports/no-unused-imports-ts": "warn"
+    }
   },
   "browserslist": {
     "production": [

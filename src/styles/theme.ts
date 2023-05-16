@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
+
 import { BREAKPOINTS } from "./const";
 
 /** Chakra UIのテーマを上書きする */

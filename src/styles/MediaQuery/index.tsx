@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
+
 import { useMediaQuery } from "@chakra-ui/react";
 
 import { BREAKPOINTS } from "../const";

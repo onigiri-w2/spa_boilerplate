@@ -1,5 +1,6 @@
 import { todoApiBase } from "@/api/backends/todo/baseAxios";
-import {
+
+import type {
   UserRegisterPostResponse,
   UserProfileGetResponse,
   UserProfileGetRequest,

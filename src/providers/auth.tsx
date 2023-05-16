@@ -16,6 +16,7 @@ export const AuthContext = createContext<AuthContextType>({
   isLogin: false,
   authUser: undefined,
 });
+
 export const AuthProvider = ({ children }: ProviderProps) => {
   const { isLoading, isLogin, authUser } = useAuth();
   return (

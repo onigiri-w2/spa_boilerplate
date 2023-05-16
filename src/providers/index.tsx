@@ -2,11 +2,12 @@ import React from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter } from "react-router-dom";
 
+import { ChakraProvider } from "@chakra-ui/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 import { MediaQueryProvider } from "@/styles/MediaQuery";
 import theme from "@/styles/theme";
 import { RootErrorBoundary } from "@/utils/exception/RootErrorBoundary";
-import { ChakraProvider } from "@chakra-ui/react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { AuthProvider } from "./auth";
 import { UserProvider } from "./user";
